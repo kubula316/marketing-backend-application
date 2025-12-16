@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @Validated
 @RestController
 @RequiredArgsConstructor
@@ -27,6 +29,11 @@ public class SellerController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public SellerDto create(@Valid @RequestBody CreateSellerRequest request) {
 		return sellerService.create(request);
+	}
+
+	@GetMapping
+	public List<SellerDto> list() {
+		return sellerService.list();
 	}
 
 	@GetMapping("/{sellerId}")
