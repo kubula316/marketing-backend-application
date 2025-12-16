@@ -1,6 +1,9 @@
 # Marketing Application
 
 A Spring Boot REST API for managing marketing campaigns, products, and sellers.
+
+## Live test: https://marketing-frontend-app.onrender.com
+
 ## API Endpoints
 
 ### Sellers
